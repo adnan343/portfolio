@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adnan Hossain</title>
+    <link rel="icon" type="image/png" href="/static/application.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a; /* Dark background */
+            color: #e0e0e0; /* Light gray text */
+        }
+        #m {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Left Column Styling */
+        .left-column {
+            background-color: #1a1a1a; /* Darker for left column */
+            height: 100vh; /* Full height */
+            position: sticky;
+            top: 0; /* Stick the column to the top while scrolling */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center the content vertically */
+            align-items: center; /* Center horizontally */
+            padding: 40px;
+        }
+
+        .left-column .nav-link {
+            color: #d1d1d1;
+            transition: color 0.3s;
+        }
+
+        .left-column .nav-link:hover,
+        .left-column .nav-link.active {
+            color: #ff5e99; /* Magenta for active or hovered links */
+        }
+
+        /* Right Column Styling */
+        .content-column {
+            padding: 40px;
+            height: auto; /* Set height to auto */
+        }
+
+        /* Shared Height for Both Columns */
+        .row {
+            display: flex;
+            min-height: 100vh; /* Ensure both columns take up full height */
+        }
+
+        /* Heading Styling */
+        h2 {
+            color: #d394ab; /* Muted magenta for section headings */
+        }
+
+        h1 {
+            color: #ffffff; /* Highlighted name in white */
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: #2c2c2c; /* Darker background for sections */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Progress Bars for Skills */
+        .progress {
+            background-color: #3a3a3a; /* Darker background for progress bar track */
+        }
+
+        .progress-bar {
+            background-color: #d394ab; /* Magenta progress bar */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #1e1e1e; /* Dark background for footer */
+            color: #e0e0e0; /* Light gray text */
+        }
+
+        @media (max-width: 767.98px) {
+            /* Make columns stack on small screens */
+            .left-column {
+                position: relative; /* Change to relative to unstick on small screens */
+                height: auto; /* Allow height to adjust */
+                padding: 20px;
+                display: flex; /* Keep the left column as a flex container */
+                flex-direction: column; /* Stack contents vertically */
+                align-items: center; /* Center content horizontally */
+            }
+
+            .content-column {
+                padding: 20px;
+            }
+
+            /* Hide navigation links on small screens */
+            .nav-item {
+                display: none; /* Hide all nav items */
+            }
+
+            /* Show name and description */
+            .name-description {
+                display: flex; /* Display name and description */
+                flex-direction: column; /* Stack vertically */
+                align-items: center; /* Center horizontally */
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".left-column" data-bs-offset="70" tabindex="0">
+
+    <div class="container"> <!-- Changed to a fixed container -->
+        <div class="row">
+            <!-- Left Column for Navigation -->
+            <nav class="col-md-5 col-lg-4 d-md-block left-column"> <!-- Increased size -->
+                <div class="name-description"> <!-- New wrapper for name and description -->
+                    <h1 class="mb-4 mt-5">Hi, I'm <strong>MD. Adnan Hossain Sadi</strong></h1>
+                    <p class="lead">Computer Science Student</p>
+                </div>
+                <br>
+                <ul class="nav flex-column text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a> <!-- Added Education link -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <br>
+                <div id="m">
+                    <a href="https://github.com/adnan343" target="_blank">
+                        GitHub
+                    </a> &nbsp; &nbsp;
+                    <a href="https://www.linkedin.com/in/md-adnan-hossain-sadi-00b551200/" target="_blank">
+                        LinkedIn
+                    </a> &nbsp; &nbsp;
+                    <a href="https://www.youtube.com/@adnanhossainsadi" target="_blank">
+                        YouTube
+                    </a> &nbsp; &nbsp;
+                    <a href="https://www.facebook.com/adnanhossainsadi64/" target="_blank">
+                        Facebook
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Right Column for Content -->
+            <div class="col-md-7 col-lg-8 content-column mt-5"> <!-- Adjusted size for content column -->
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>I'm a 3rd-year Computer Science and Engineering student with a strong interest in quantum computing, artificial intelligence, and machine learning. I'm currently exploring these fields and plan to focus my undergraduate thesis on quantum computing.</p>
+                </section>
+
+                <section id="education">
+                    <h2>Education</h2>
+                    <p>Bachelor of Science in Computer Science & Engineering - BRAC University, Dhaka, Bangladesh (2022 - Present)</p>
+                    <p>HSC (Science) - Milestone College, Dhaka (2019 - 2021)</p>
+                    <p>SSC (Science) - Sristy Academic School, Tangail (2017 - 2019)</p>
+                </section>
+
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <div class="mb-3">
+                        <span>Python</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>Java</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>Flask</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>Django</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>MySQL</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>HTML</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 87%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <span>Bootstrap</span>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <p>HR at Robotics Club of BRAC University (ROBU) (2020 - Present)</p>
+                </section>
+
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li><a href="https://github.com/adnan343/Connect-Sphere.git" target="_blank">Connect Sphere</a> - a simple social media platform that allows users to connect with friends, share posts, and comment on updates.<br></li>
+                    </ul>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact</h2>
+                    <p>Email: <a href="mailto:adnanhossainsadi64@gmail.com">adnanhossainsadi64@gmail.com</a></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to set the active link based on the scroll position
+        document.addEventListener("DOMContentLoaded", function() {
+            // Activate the top section by default
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active'); // Remove active class from all links
+            });
+            navLinks[0].classList.add('active'); // Add active class to the first link
+        });
+    </script>
+</body>
+
+</html>
